@@ -1,392 +1,387 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- <meta charset="utf-8">
-    <title>HTML CSS Register Form</title>
-    <link rel="stylesheet" href="style.css"> -->
-    <style>
-      body {
-        background: linear-gradient(
-          to right,
-          #78a7ba 0%,
-          #385d6c 50%,
-          #78a7ba 99%
-        );
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      .signup-form {
-        font-family: "Roboto", sans-serif;
-        width: 650px;
-        margin: 30px auto;
-        background: linear-gradient(
-          to right,
-          #ffffff 0%,
-          #fafafa 50%,
-          #ffffff 99%
-        );
-        border-radius: 10px;
-      }
-
-      /*---------------------------------------*/
-      /* Form Header */
-      /*---------------------------------------*/
-      .form-header {
-        background-color: #eff0f1;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-      }
-
-      .form-header h1 {
-        font-size: 30px;
-        text-align: center;
-        color: #666;
-        padding: 20px 0;
-        border-bottom: 1px solid #cccccc;
-      }
-
-      /*---------------------------------------*/
-      /* Form Body */
-      /*---------------------------------------*/
-      .form-body {
-        padding: 10px 40px;
-        color: #666;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      .form-body .label-title {
-        color: #1bba93;
-        font-size: 17px;
-        font-weight: bold;
-        padding: auto;
-      }
-
-      .form-body .form-input {
-        font-size: 17px;
-        box-sizing: border-box;
-        width: 100%;
-        height: 34px;
-        padding-left: 10px;
-        padding-right: 10px;
-        color: #333333;
-        text-align: left;
-        border: 1px solid #d6d6d6;
-        border-radius: 4px;
-        background: white;
-        outline: none;
-      }
-
-      .horizontal-group .left {
-        float: left;
-        width: 49%;
-      }
-
-      .horizontal-group .right {
-        float: right;
-        width: 49%;
-      }
-
-      input[type="file"] {
-        outline: none;
-        cursor: pointer;
-        font-size: 17px;
-      }
-
-      #range-label {
-        width: 15%;
-        padding: 5px;
-        background-color: #1bba93;
-        color: white;
-        border-radius: 5px;
-        font-size: 17px;
-        position: relative;
-        top: -8px;
-      }
-
-      ::-webkit-input-placeholder {
-        color: #d9d9d9;
-      }
-
-      /*---------------------------------------*/
-      /* Form Footer */
-      /*---------------------------------------*/
-      .signup-form .form-footer {
-        background-color: #eff0f1;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        padding: 10px 40px;
-        text-align: right;
-        border-top: 1px solid #cccccc;
-        clear: both;
-      }
-
-      .form-footer span {
-        float: left;
-        margin-top: 10px;
-        color: #999;
-        font-style: italic;
-        font-weight: thin;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #1bba93;
-        font-size: 17px;
-        border: none;
-        border-radius: 5px;
-        color: #bcf5e7;
-        cursor: pointer;
-      }
-
-      .btn:hover {
-        background-color: #169c7b;
-        color: white;
-      }
-      .hour {
-        width: 100%;
-      }
-      .hour label {
-        display: block;
-        margin-top: 10px;
-      }
-      .hour input {
-        width: 100%;
-        margin: 10px 0;
-        font-size: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <form class="signup-form" name="frm" onsubmit="return validate()">
-      <!-- form header -->
-      <div class="form-header">
-        <h1>Employee Registation Form</h1>
-      </div>
-
-      <!-- form body -->
-      <div class="form-body">
-        <!-- Firstname and Lastname -->
-        <div class="horizontal-group">
-          <div class="form-group left">
-            <label for="firstname" class="label-title">First name *</label>
-            <input
-              name="fname"
-              type="text"
-              id="firstname"
-              class="form-input"
-              placeholder="Enter your first name"
-              required="required"
+<Html>
+    <Html Lang="En">
+        <Head>
+            <Meta Charset="UTF-8" />
+            <Meta
+                Name="Viewport"
+                Content="Width=Device-Width, Initial-Scale=1.0"
             />
-          </div>
-          <div class="form-group right">
-            <label for="lastname" class="label-title">Last name*</label>
-            <input
-              name="lname"
-              type="text"
-              id="lastname"
-              class="form-input"
-              placeholder="Enter your last name"
-              required
-            />
-          </div>
-        </div>
-
-        <!-- Number -->
-        <div class="form-group">
-          <label for="number" class="label-title">Phone Number</label>
-          <input
-            name="number"
-            type="number"
-            id="number"
-            class="form-input"
-            placeholder="Enter your Phone Number"
-          />
-        </div>
-
-        <!-- linkedin id  -->
-        <div class="form-group">
-          <label for="text" class="label-title">Linkedin id</label>
-          <input
-            type="text"
-            id="email"
-            class="form-input"
-            placeholder="Enter your linkedin id"
-          />
-        </div>
-
-        <!-- Gender and Qualification -->
-        <div class="horizontal-group">
-          <div class="form-group left">
-            <label class="label-title">Gender:</label>
-            <div class="input-group">
-              <label for="male"
-                ><input type="radio" name="gender" value="male" id="male" />
-                Male</label
-              >
-              <label for="female"
-                ><input type="radio" name="gender" value="female" id="female" />
-                Female</label
-              >
-            </div>
-          </div>
-          <div class="form-group right">
-            <label class="label-title">Qualification</label>
-            <div>
-              <label><input type="checkbox" value="10th" />10th</label>
-              <label><input type="checkbox" value="12th" />12th</label>
-              <label><input type="checkbox" value="graduate" />Graduate</label>
-              <label
-                ><input type="checkbox" value="post-graduate" />Post
-                Graduate</label
-              >
-            </div>
-          </div>
-        </div>
-        <!-- Work Hour and Ending Hour -->
-        <div class="horizontal-group">
-          <div class="form-group hour">
-            <label class="label-title">Start Work:</label>
-            <div class="input-group">
-              <label
-                >Start Hour*:
-                <input
-                  type="number"
-                  value="start-hour"
-                  placeholder="00:00 Hour"
-                  required
-              /></label>
-            </div>
-            <div class="input-group">
-              <label
-                >End Hour*:
-                <input
-                  type="number"
-                  value="start-hour"
-                  placeholder="00:00 Hour"
-                  required
-              /></label>
-            </div>
-          </div>
-        </div>
-
-        <!-- Employee Role and Income -->
-        <div class="horizontal-group">
-          <div class="form-group left">
-            <label class="label-title">Employee Role*</label>
-            <select class="form-input" id="level" required>
-              <option value=""></option>
-              <option value="FS">Full-Stack Developer</option>
-              <option value="FE">Front-End Developer</option>
-              <option value="BE">Backend-Developer</option>
-            </select>
-          </div>
-          <div class="form-group right">
-            <label for="experience" class="label-title">Income</label>
-            <input
-              name="salary"
-              type="range"
-              min="2"
-              max="50"
-              step="2"
-              value="0"
-              id="experience"
-              class="form-input"
-              onChange="change();"
-              style="height: 28px; width: 78%; padding: 0"
-            />
-            <span id="range-label">0K</span>
-          </div>
-        </div>
-
-        <!-- Profile picture and Age -->
-        <div class="horizontal-group">
-          <div class="form-group left">
-            <label for="choose-file" class="label-title"
-              >Upload Profile Picture</label
-            >
-            <input type="file" id="choose-file" size="80" />
-          </div>
-          <div class="form-group left">
-            <label for="experience" class="label-title">Age</label>
-            <input
-              type="number"
-              min="18"
-              max="80"
-              value="18"
-              class="form-input"
-            />
-          </div>
-        </div>
-
-        <!-- marrigal status and city name-->
-        <div class="horizontal-group">
-          <div class="form-group left">
-            <label class="label-title">Marital status*</label>
-            <select class="form-input" id="level" required>
-              <option value="none"></option>
-              <option value="married">Married</option>
-              <option value="unmarried">Unmarried</option>
-              <option value="divorced">Divorced</option>
-            </select>
-          </div>
-          <div class="form-group right">
-            <label class="label-title">City name</label>
-            <select class="form-input" id="level">
-              <option value="none"></option>
-              <option value="vns">Varanasi</option>
-              <option value="mzp">Mirzapur</option>
-              <option value="balli">Balli</option>
-              <option value="gazipur">Gazipur</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Bio -->
-        <div class="form-group">
-          <label for="choose-file" class="label-title">Bio</label>
-          <textarea
-            class="form-input"
-            rows="4"
-            cols="50"
-            style="height: auto"
-          ></textarea>
-        </div>
-      </div>
-
-      <!-- form-footer -->
-      <div class="form-footer">
-        <span>* required</span>
-        <button type="submit" class="btn">Create</button>
-      </div>
-    </form>
-
-    <!-- Script for range input label -->
-    <script>
-      function validate() {
-        var fname = document.forms["frm"]["fname"].value;
-        var lname = document.forms["frm"]["lname"].value;
-        var salary = document.forms["frm"]["salary"].value;
-        if (fname.length < 5) {
-          alert("Fname should be more than 5 Characters.");
-        }
-        if (lname.length < 5) {
-          alert("Lname should be more than 5 Characters.");
-        }
-        if (salary <= 5) {
-          alert("Salary Should be more than 5K.");
-          return false;
-        }
-      }
-      var rangeLabel = document.getElementById("range-label");
-      var experience = document.getElementById("experience");
-
-      function change() {
-        rangeLabel.innerText = experience.value + "K";
-      }
-    </script>
-  </body>
-</html>
+            <Title>Home</Title>
+            <Link Rel="Stylesheet" Href="Styles.css" />
+        </Head>
+        <Body>
+            <Div Id="Bg">
+                <Center></Center>
+                <Br />
+                <B><U> <H1>STUDENT REGISTRATION FORM</H1></U>
+                </B>
+                <Div Id="Form">
+                    <Form Method="Get" Action="Submit.Html">
+                        <Table Id="Table">
+                            <Tr>
+                                <Td>FIRST NAME:</Td>
+                                <Td>
+                                    <Input
+                                        Type="Text"
+                                        Name="Username"
+                                        Size="30"
+                                        Maxlength="30"
+                                        Placeholder="Enter First Name"
+                                    />
+                                    (Max 30 Characters A-Z And A-Z)
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>LAST NAME:</Td>
+                                <Td>
+                                    <Input
+                                        Type="Text"
+                                        Name="Username"
+                                        Size="30"
+                                        Maxlength="30"
+                                        Placeholder="Enter Last Name"
+                                    />
+                                    (Max 30 Characters A-Z And A-Z)
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>DATE OF BIRTH:</Td>
+                                <Td>
+                                    <Input
+                                        Type="Number"
+                                        Name="Day"
+                                        Size="2"
+                                        Maxlength="2"
+                                        Placeholder="Day"
+                                        Min="1"
+                                        Max="31"
+                                    />
+                                    <Select Name="Month">
+                                        <Option Value="Month">Month</Option>
+                                        <Option Value="Jan">Jan</Option>
+                                        <Option Value="Feb">Feb</Option>
+                                        <Option Value="Mar">Mar</Option>
+                                        <Option Value="Apr">Apr</Option>
+                                        <Option Value="May">May</Option>
+                                        <Option Value="June">June</Option>
+                                        <Option Value="July">July</Option>
+                                        <Option Value="Aug">Aug</Option>
+                                        <Option Value="Sep">Sep</Option>
+                                        <Option Value="Oct">Oct</Option>
+                                        <Option Value="Nov">Nov</Option>
+                                        <Option Value="Dec">Dec</Option>
+                                    </Select>
+                                    <Input
+                                        Type="Text"
+                                        Name="Year"
+                                        Size="5"
+                                        Maxlength="4"
+                                        Placeholder="Year"
+                                        Min="1991"
+                                        Max="2005"
+                                    />
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>EMAIL ID:</Td>
+                                <Td>
+                                    <Input
+                                        Id="Email"
+                                        Type="Email"
+                                        Name="Email"
+                                        Size="30"
+                                        Maxlength="100"
+                                    />
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>MOBILE NO:</Td>
+                                <Td>
+                                    <Input
+                                        Type="Tel"
+                                        Name="Number"
+                                        Size="30"
+                                        Maxlength="12"
+                                        Placeholder="Enter Mobile No"
+                                    />
+                                    (10 Digits Number)
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>GENDER:</Td>
+                                <Td>
+                                    <Input
+                                        Id="Female"
+                                        Type="Radio"
+                                        Name="Gender"
+                                        Value="F"
+                                    />
+                                    <Label For="Female">Female</Label>
+                                    <Input
+                                        Id="Male"
+                                        Type="Radio"
+                                        Name="Gender"
+                                        Value="M"
+                                    />
+                                    <Label For="Male">Male</Label>
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>ADDRESS:</Td>
+                                <Td>
+                                    <Textarea Rows="4" Cols="40" Id="Comments">
+                                    </Textarea>
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>CITY:</Td>
+                                <Td>
+                                    <Input
+                                        Type="Text"
+                                        Name="City"
+                                        Size="30"
+                                        Maxlength="30"
+                                        Placeholder="Enter Your City Name"
+                                    />
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>PIN CODE:</Td>
+                                <Td>
+                                    <Input
+                                        Type="Text"
+                                        Name="Pin"
+                                        Size="30"
+                                        Maxlength="30"
+                                        Placeholder="Enter Pin Code"
+                                    />
+                                    (6 Digits Number)
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>STATE:</Td>
+                                <Td>
+                                    <Input
+                                        Type="Text"
+                                        Name="State"
+                                        Size="30"
+                                        Maxlength="30"
+                                        Placeholder="Enter Your State Name"
+                                    />
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>COUNTRY:</Td>
+                                <Td>
+                                    <Input
+                                        Type="Text"
+                                        Name="COUNTRY"
+                                        Size="30"
+                                        Maxlength="30"
+                                        Placeholder="Enter Your City Name"
+                                    />
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>HOBBIES</Td>
+                                <Td>
+                                    <Input
+                                        Type="Checkbox"
+                                        Name="Singing"
+                                        Value="Singing"
+                                    />
+                                    Singing
+                                    <Input
+                                        Type="Checkbox"
+                                        Name="HOBBIES"
+                                        Value="Dancing"
+                                    />
+                                    Dancing
+                                    <Input
+                                        Type="Checkbox"
+                                        Name="HOBBIES"
+                                        Value="Drawing"
+                                    />
+                                    Drawing
+                                    <Input
+                                        Type="Checkbox"
+                                        Name="HOBBIES"
+                                        Value="Sketching"
+                                    />
+                                    Sketching <Br />
+                                    <Input
+                                        Type="Checkbox"
+                                        Name="HOBBIES"
+                                        Value="Others"
+                                    />
+                                    Others<Input
+                                        Type="Text"
+                                        Name="HOBBIES"
+                                        Size="30"
+                                        Maxlength="30"
+                                        Placeholder="Enter Any Other Hobby"
+                                    />
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>QUALIFICATION</Td>
+                                <Td>
+                                    <Table Width="600px" , Height="100px">
+                                        <Tr>
+                                            <Th>S.N0</Th>
+                                            <Th>Examination</Th>
+                                            <Th>Board</Th>
+                                            <Th>Percentage</Th>
+                                            <Th>Year Of Passing</Th>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>1.</Td>
+                                            <Th>Class X</Th>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="20"
+                                                    Maxlength="20"
+                                                />
+                                            </Td>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="15"
+                                                    Maxlength="10"
+                                                />
+                                            </Td>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="15"
+                                                    Maxlength="10"
+                                                />
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>2.</Td>
+                                            <Th>Class XII</Th>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="20"
+                                                    Maxlength="20"
+                                                />
+                                            </Td>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="15"
+                                                    Maxlength="10"
+                                                />
+                                            </Td>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="15"
+                                                    Maxlength="10"
+                                                />
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>3.</Td>
+                                            <Th>Graduation</Th>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="20"
+                                                    Maxlength="20"
+                                                />
+                                            </Td>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="15"
+                                                    Maxlength="10"
+                                                />
+                                            </Td>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="15"
+                                                    Maxlength="10"
+                                                />
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>4.</Td>
+                                            <Th>Masters</Th>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="20"
+                                                    Maxlength="20"
+                                                />
+                                            </Td>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="15"
+                                                    Maxlength="10"
+                                                />
+                                            </Td>
+                                            <Td>
+                                                <Input
+                                                    Type="Text"
+                                                    Name="State"
+                                                    Size="15"
+                                                    Maxlength="10"
+                                                />
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td></Td>
+                                            <Td></Td>
+                                            <Td>(10 Char Max)</Td>
+                                            <Td>(Upto To Decimal)</Td>
+                                            <Td></Td>
+                                        </Tr>
+                                    </Table>
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>COURSES:</Td>
+                                <Td>
+                                    <Select Name="COURSES">
+                                        <Option Value="COURSES">Courses</Option>
+                                        <Option Value="BCA">BCA</Option>
+                                        <Option Value="B.Com">B.Com</Option>
+                                        <Option Value="B.Sc">B.Sc</Option>
+                                        <Option Value="B.A.">B.A.</Option>
+                                        <Option Value="B.Tech">B.Tech</Option>
+                                        <Option Value="MBA">MBA</Option>
+                                        <Option Value="B.Pharma">B.Pharma</Option>
+                                        <Option Value="M.Pharma">M.Pharma</Option>
+                                    </Select>
+                                </Td>
+                            </Tr>
+                            <Tr>
+                                <Td>
+                                    <Button Type="Submit">Submit</Button>
+                                    <Button Type="Reset">Reset</Button>
+                                </Td>
+                            </Tr>
+                        </Table>
+                    </Form>
+                </Div>
+            </Div>
+        </Body>
+    </Html>
+</Html>
